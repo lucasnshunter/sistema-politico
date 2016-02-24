@@ -1,0 +1,136 @@
+<%= form_for(@cadastro) do |f| %>
+  <% if @cadastro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cadastro.errors.count, "error") %> prohibited this cadastro from being saved:</h2>
+
+      <ul>
+      <% @cadastro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <td> <%= f.label :nome %></td>
+        <td> <%= f.label :idade %></td>
+        <td><%= f.label :data_de_nascimento %></td>
+        <td><%= f.label :filhos %></td>
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> <%= f.text_field :nome %></td>
+        <td> <%= f.text_field :idade %></td>
+        <td> <%= f.text_field :data_de_nascimento %></td>
+         <td> <%= f.check_box :filhos %></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <td> <%= f.label :rede_social %></td>
+        <td><%= f.label :tipo_rede %></td>
+        <td><%= f.label :nome_do_programa %></td>
+        <td><%= f.label :programa_assistencial %></td>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> <%= f.text_field :rede_social %></td>
+        <td> <%= f.text_field :tipo_rede %></td>
+        <td> <%= f.text_field :nome_do_programa %></td>
+        <td><%= f.check_box :programa_assistencial %></td>
+       
+      </tr>
+    </tbody>
+    
+    <table class="table table-bordered">
+    <thead>
+      <tr>
+        <td> <%= f.label :endereco %></td>
+        <td> <%= f.label :bairro %></td>
+        <td><%= f.label :cep %></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= f.text_field :endereco %></td>
+        <td> <%= f.text_field :bairro %></td>
+        <td> <%= f.text_field :cep %></td>
+      </tr>
+      
+      
+    </tbody>
+    
+     <thead>
+      <tr>
+        <td>  <%= f.label :regiao %></td>
+        <td> <%= f.label :cidade %></td>
+        <td><%= f.label :estado %></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= f.text_field :regiao %></td>
+        <td><%= f.text_field :cidade %></td>
+        <td><%= f.text_field :estado %></td>
+      </tr>
+      
+      
+    </tbody>
+    </table>
+    
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <td> <%= f.label :telefone %></td>
+          <td><%= f.label :celular %></td>
+          <td> <%= f.label :email %></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= f.text_field :telefone %></td>
+          <td><%= f.text_field :celular %></td>
+          <td><%= f.text_field :email %></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    
+    
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+         <td><%= f.label :ocupacao %></td>
+         <td> <%= f.label :instituicao %></td>
+         <td> <%= f.label :equipe %></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+         <td><%= f.text_field :ocupacao %></td>
+         <td><%= f.text_field :instituicao %></td>
+         <td> <%= f.check_box :equipe %></td>
+        </tr>
+      </tbody>
+    </table>
+
+  
+  
+  <div class="field">
+    <%= f.label :observacao %><br>
+    <%= f.text_area :observacao %>
+  </div>
+  <div class="actions">
+    <%= f.submit "criar cadastro" %>
+  </div>
+<% end %>

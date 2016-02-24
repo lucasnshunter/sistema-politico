@@ -1,0 +1,118 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Agendas</h1>
+ 
+<table class="table table-bordered">
+  <% @agendas.each do |agenda| %>
+  <thead>
+    <tr>
+      <th>Compromisso</th>
+      <th>Data</th>
+      <th>Local</th>
+      <th>Horario</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= agenda.compromisso %></td>
+      <td><%= agenda.data %></td>
+      <td><%= agenda.local %></td>
+      <td><%= agenda.horario %></td>
+    </tr>
+  </tbody>
+
+
+
+  
+  <thead>
+    <tr>
+      <th>Classe compromisso</th>
+      <th>Status</th>
+      <th>Realizado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= agenda.classe_compromisso %></td>
+      <td><%= agenda.status %></td>
+      <td><%= agenda.realizado %></td>
+    </tr>
+  </tbody>
+
+
+
+  <thead>
+    <tr>
+     <th>Descricao</th>
+     <th>Observacao</th>
+     <th>Anfitriao</th>
+     <th>Cargo anfitriao</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     <td><%= agenda.descricao %></td>
+     <td><%= agenda.observacao %></td>
+     <td><%= agenda.anfitriao %></td>
+     <td><%= agenda.cargo_anfitriao %></td>
+        
+    </tr>
+  </tbody>
+
+
+
+  <thead>
+    <tr>
+      <th>Orgao</th>
+      <th>Convidado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td><%= agenda.orgao %></td>
+    <td><%= agenda.convidado %></td>
+    </tr>
+  </tbody>
+
+
+
+  <thead>
+    <tr>
+    
+      <th>Telefone contato</th>
+      <th>Web page</th>
+      <th>Email</th>
+      <th>Telefone convidado</th>
+        <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     <td><%= agenda.telefone_contato %></td>
+     <td><%= agenda.web_page %></td>
+     <td><%= agenda.email %></td>
+     <td><%= agenda.telefone_convidado %></td>
+     
+     
+  </tbody>
+
+<tbody>
+    <tr>
+
+  <td><%= link_to 'Show', agenda %></td>
+    <td><%= link_to 'Edit', edit_agenda_path(agenda) %></td>
+    <td><%= button_to 'Destroy', agenda, method: :delete,class:"btn btn-danger", data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+     <% end %>
+  </tbody>
+</table>
+   
+ 
+
+<br>
+
+<%= link_to 'New Agenda', new_agenda_path %>
+     
+     
+      
+      

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workspace</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= nav_bar brand: "Sistema V.J.H", brand_link: "/home/home" do %>
+<%=form_tag resultado_path,:method => 'get',class:"navbar-form navbar-right" do %>
+<%=text_field_tag :query, params[:query]%>
+<%=submit_tag "procurar" ,:nome => nil%>
+<%end%>
+
+<%end%>
+<div class="container">
+<%= yield %>
+</div>
+
+</body>
+</html>
