@@ -1,0 +1,96 @@
+<%= form_for(@oficio) do |f| %>
+  <% if @oficio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@oficio.errors.count, "error") %> prohibited this oficio from being saved:</h2>
+
+      <ul>
+      <% @oficio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <table class="table table-bordered">
+    
+      <thead>
+        <tr>
+          <td><%= f.label :titulo %></td>
+          <td><%= f.label :tema %></td>
+          <td> <%= f.label :numero %></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> <%= f.text_field :titulo %></td>
+          <td><%= f.text_field :tema %></td>
+          <td> <%= f.number_field :numero %></td>
+        </tr>
+      </tbody>
+  
+  </table>
+  
+  <table class="table table-bordered">
+    
+      <thead>
+        <tr>
+         <td> <%= f.label :resumo %></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+         <td> <%= f.text_area :resumo %></td>
+        </tr>
+      </tbody>
+  
+  </table>
+  
+  <table class="table table-bordered">
+    
+      <thead>
+        <tr>
+          <td><%= f.label :data_criacao %></td>
+          <td><%= f.label :data_envio %></td>
+          <td><%= f.label :data_recebimento %></td>
+        
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+         <td> <%= f.date_select :data_criacao %></td>
+         <td> <%= f.date_select :data_envio %></td>
+         <td> <%= f.date_select :data_recebimento %></td>
+        </tr>
+      </tbody>
+  
+  </table>
+
+  <table class="table table-bordered">
+    
+      <thead>
+        <tr>
+          <td> <%= f.label :destinatario %></td>
+          <td> <%= f.label :instituicao_destinatario %></td>
+          <td> <%= f.label :remetente %></td>
+          <td><%= f.label :instituicao_remetente %></td>
+        
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= f.text_field :destinatario %></td>
+          <td> <%= f.text_field :instituicao_destinatario %></td>
+          <td> <%= f.text_field :remetente %></td>
+          <td> <%= f.text_field :instituicao_remetente %></td>
+         
+        </tr>
+      </tbody>
+  
+  </table>
+ 
+ 
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151124105811) do
+ActiveRecord::Schema.define(version: 20160301152816) do
 
   create_table "agendas", force: :cascade do |t|
     t.string   "compromisso"
@@ -59,6 +59,40 @@ ActiveRecord::Schema.define(version: 20151124105811) do
     t.text     "observacao"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "subject"
+    t.text     "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "emails", force: :cascade do |t|
+    t.string   "nome"
+    t.string   "email"
+    t.string   "assunto"
+    t.text     "mensagem"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "oficios", force: :cascade do |t|
+    t.string   "tema"
+    t.string   "titulo"
+    t.text     "resumo"
+    t.integer  "numero"
+    t.date     "data_criacao"
+    t.date     "data_envio"
+    t.date     "data_recebimento"
+    t.string   "destinatario"
+    t.string   "instituicao_destinatario"
+    t.string   "remetente"
+    t.string   "instituicao_remetente"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tema: MyString
+  titulo: MyString
+  resumo: MyText
+  numero: 1
+  data_criacao: 2016-02-29
+  data_envio: 2016-02-29
+  data_recebimento: 2016-02-29
+  destinatario: MyString
+  instituicao_destinatario: MyString
+  remetente: MyString
+  instituicao_remetente: MyString
+
+two:
+  tema: MyString
+  titulo: MyString
+  resumo: MyText
+  numero: 1
+  data_criacao: 2016-02-29
+  data_envio: 2016-02-29
+  data_recebimento: 2016-02-29
+  destinatario: MyString
+  instituicao_destinatario: MyString
+  remetente: MyString
+  instituicao_remetente: MyString

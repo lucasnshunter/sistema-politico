@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  
+  resources :oficios
   get 'home/home'
 
   resources :agendas

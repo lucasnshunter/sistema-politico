@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tema:</strong>
+  <%= @oficio.tema %>
+</p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @oficio.titulo %>
+</p>
+
+<p>
+  <strong>Resumo:</strong>
+  <%= @oficio.resumo %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @oficio.numero %>
+</p>
+
+<p>
+  <strong>Data criacao:</strong>
+  <%= @oficio.data_criacao %>
+</p>
+
+<p>
+  <strong>Data envio:</strong>
+  <%= @oficio.data_envio %>
+</p>
+
+<p>
+  <strong>Data recebimento:</strong>
+  <%= @oficio.data_recebimento %>
+</p>
+
+<p>
+  <strong>Destinatario:</strong>
+  <%= @oficio.destinatario %>
+</p>
+
+<p>
+  <strong>Instituicao destinatario:</strong>
+  <%= @oficio.instituicao_destinatario %>
+</p>
+
+<p>
+  <strong>Remetente:</strong>
+  <%= @oficio.remetente %>
+</p>
+
+<p>
+  <strong>Instituicao remetente:</strong>
+  <%= @oficio.instituicao_remetente %>
+</p>
+
+<%= link_to 'Edit', edit_oficio_path(@oficio) %> |
+<%= link_to 'Back', oficios_path %>

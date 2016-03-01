@@ -1,0 +1,92 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista de Oficios</h1>
+
+<table class="table table-bordered">
+  <% @oficios.each do |oficio| %>
+  <thead>
+    <tr>
+     <td>Titulo</td>
+     <td>Tema</td>
+     <td>numero</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= oficio.titulo %></td>
+      <td><%= oficio.tema %></td>
+      <td><%= oficio.numero %></td>
+    </tr>
+  </tbody>
+  
+  <thead>
+    <tr>
+      <td>Data de criação</td>
+      <td>Data de envio</td>
+      <td>Data de recebimento</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= oficio.data_criacao %></td>
+      <td><%= oficio.data_envio %></td>
+      <td><%= oficio.data_recebimento %></td>
+    </tr>
+  </tbody>
+  </tbody>
+  <thead>
+    <tr>
+      <td>Destinatario</td>
+      <td>Instituição do destinatario</td>
+      <td>Rementente</td>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= oficio.destinatario %></td>
+      <td><%= oficio.instituicao_destinatario %></td>
+      <td><%= oficio.remetente %></td>
+    </tr>
+  </tbody>
+  <thead>
+    <tr>
+      <td>Resumo</td>
+     <td>intituição do remetente</td>
+     <td>Atualizar</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= oficio.resumo %></td>
+      <td><%= oficio.instituicao_remetente %></td>
+      <td><%= link_to 'Edit', edit_oficio_path(oficio) %></td>
+    </tr>
+  </tbody>
+  </tbody>
+  <thead>
+    <tr>
+      <td>mostrar</td>
+      
+      <td>Destruir</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+       <td><%= link_to 'Show', oficio %></td>
+       
+      <td><%= link_to 'Destroy', oficio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  </tbody>
+        
+        
+        
+       
+      
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Oficio', new_oficio_path %>
