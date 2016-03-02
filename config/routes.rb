@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   
+  resources :notes
   devise_for :users
   resources :oficios
   get 'home/home'
