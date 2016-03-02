@@ -10,3 +10,6 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 gem 'twitter-bootstrap-rails'
+gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'

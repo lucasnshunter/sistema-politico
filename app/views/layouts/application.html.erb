@@ -9,14 +9,16 @@
 <body>
 
 <%= nav_bar brand: "Sistema V.J.H", brand_link: "/home/home" do %>
-<%=form_tag resultado_path,:method => 'get',class:"navbar-form navbar-right" do %>
-<%=text_field_tag :query, params[:query]%>
-<%=submit_tag "procurar" ,:nome => nil%>
+  <%=form_tag resultado_path,:method => 'get',class:"navbar-form navbar-right" do %>
+    <%=text_field_tag :query, params[:query]%>
+    <%=submit_tag "procurar" ,:nome => nil%>
+  <%end%>
 <%end%>
 
-<%end%>
 <div class="container">
-<%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
 </div>
 
 </body>
