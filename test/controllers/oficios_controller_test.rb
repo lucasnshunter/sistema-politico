@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class OficiosControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+
   setup do
+    @request.env["devise.mapping"] = Devise.mappings[:admin]
+    sign_in(users(:one))
     @oficio = oficios(:one)
   end
 
