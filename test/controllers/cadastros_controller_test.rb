@@ -4,7 +4,7 @@ class CadastrosControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
-    @request.env["devise.mapping"] = Devise.mappings[:admin]
+    @request.env["devise.mapping"] = Devise.mappings[:user]
     sign_in(users(:one))
     @cadastro = cadastros(:one)
   end
