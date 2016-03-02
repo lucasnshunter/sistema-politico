@@ -22,6 +22,8 @@ one:
   instituicao: MyString
   equipe: false
   observacao: MyText
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
 
 two:
   nome: MyString
@@ -45,3 +47,5 @@ two:
   instituicao: MyString
   equipe: false
   observacao: MyText
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>

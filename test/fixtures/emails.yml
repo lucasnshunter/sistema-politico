@@ -5,9 +5,13 @@ one:
   email: MyString
   assunto: MyString
   mensagem: MyText
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
 
 two:
   nome: MyString
   email: MyString
   assunto: MyString
   mensagem: MyText
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>

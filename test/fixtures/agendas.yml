@@ -18,6 +18,8 @@ one:
   web_page: MyString
   email: MyString
   telefone_convidado: MyString
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
 
 two:
   compromisso: MyString
@@ -37,3 +39,5 @@ two:
   web_page: MyString
   email: MyString
   telefone_convidado: MyString
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>

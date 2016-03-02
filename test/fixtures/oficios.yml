@@ -12,6 +12,8 @@ one:
   instituicao_destinatario: MyString
   remetente: MyString
   instituicao_remetente: MyString
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
 
 two:
   tema: MyString
@@ -25,3 +27,5 @@ two:
   instituicao_destinatario: MyString
   remetente: MyString
   instituicao_remetente: MyString
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
