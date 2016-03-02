@@ -9,6 +9,14 @@
 <body>
 
 <%= nav_bar brand: "Sistema V.J.H", brand_link: "/home/home" do %>
+  <%= menu_group pull: :right do %>
+    <% if user_signed_in? %>
+      <%= menu_item "Desconectar", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= menu_item "Entrar", new_user_session_path %>
+      <%= menu_item "Cadastrar", new_user_registration_path %>
+    <% end %>
+  <% end %>
   <%=form_tag resultado_path,:method => 'get',class:"navbar-form navbar-right" do %>
     <%=text_field_tag :query, params[:query]%>
     <%=submit_tag "procurar" ,:nome => nil%>

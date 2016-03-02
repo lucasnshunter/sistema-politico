@@ -5,5 +5,4 @@ class HomeControllerTest < ActionController::TestCase
     get :home
     assert_response :success
   end
-
 end
