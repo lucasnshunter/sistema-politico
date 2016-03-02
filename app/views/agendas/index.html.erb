@@ -1,7 +1,5 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Lista de compromissos</h1>
- 
+
 <table class="table table-bordered">
   <% @agendas.each do |agenda| %>
   <thead>
@@ -23,7 +21,7 @@
 
 
 
-  
+
   <thead>
     <tr>
       <th>Classe compromisso</th>
@@ -55,7 +53,7 @@
      <td><%= agenda.observacao %></td>
      <td><%= agenda.anfitriao %></td>
      <td><%= agenda.cargo_anfitriao %></td>
-        
+
     </tr>
   </tbody>
 
@@ -78,7 +76,7 @@
 
   <thead>
     <tr>
-    
+
       <th>Telefone contato</th>
       <th>Web page</th>
       <th>Email</th>
@@ -92,27 +90,23 @@
      <td><%= agenda.web_page %></td>
      <td><%= agenda.email %></td>
      <td><%= agenda.telefone_convidado %></td>
-     
-     
+
+
   </tbody>
 
 <tbody>
     <tr>
 
-  <td><%= link_to 'Show', agenda %></td>
-    <td><%= link_to 'Edit', edit_agenda_path(agenda) %></td>
-    <td><%= button_to 'Destroy', agenda, method: :delete,class:"btn btn-danger", data: { confirm: 'Are you sure?' } %></td>
+  <td><%= link_to 'Mostrar', agenda %></td>
+    <td><%= link_to 'Editar', edit_agenda_path(agenda) %></td>
+    <td><%= button_to 'Apagar', agenda, method: :delete,class:"btn btn-danger", data: { confirm: 'Are you sure?' } %></td>
     </tr>
      <% end %>
   </tbody>
 </table>
-   
- 
+
+
 
 <br>
 
-<%= link_to 'New Agenda', new_agenda_path %>
-     
-     
-      
-      
+<%= link_to 'Nova Agenda', new_agenda_path %>

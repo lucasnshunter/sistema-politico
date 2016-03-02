@@ -1,9 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<center><h1>Cadastros</h1 c=></center>
-<br>
-<%= link_to '+ novo cadastro', new_cadastro_path %>
-<br>
+<center><h1>Cadastros</h1></center>
 
 <table class="table  table-bordered">
    <% @cadastros.each do |cadastro| %>
@@ -13,7 +8,7 @@
       <th>Nome</th>
       <th>Idade</th>
       <th>Data de nascimento</th>
-      
+
        </tr>
   </thead>
    <tbody>
@@ -29,7 +24,7 @@
       <th>Filhos</th>
       <th>Programa assistencial</th>
       <th>Nome do programa</th>
-    
+
       </tr>
   </thead>
   <tbody>
@@ -37,37 +32,37 @@
         <td><%= cadastro.filhos %></td>
         <td><%= cadastro.programa_assistencial %></td>
         <td><%= cadastro.nome_do_programa %></td>
-       
+
       </tr>
 </tbody>
 <!--codigo referente ao cadastro de informações sobre trabalho-->
 <thead>
-    <tr> 
+    <tr>
       <th>Endereco</th>
       <th>Bairro</th>
       <th>Cep</th>
-      
+
     </tr>
-</thead>      
+</thead>
 
 <tbody>
     <tr>
-      
+
        <td><%= cadastro.endereco %></td>
         <td><%= cadastro.bairro %></td>
         <td><%= cadastro.cep %></td>
-       
+
     </tr>
 </tbody>
 <thead>
-    <tr>  
+    <tr>
     <th>Regiao</th>
       <th>Cidade</th>
       <th>Estado</th>
-     
-       
+
+
     </tr>
-</thead>  
+</thead>
 <tbody>
   <tr>
     <td><%= cadastro.regiao %></td>
@@ -80,14 +75,14 @@
      <th>Ocupacao</th>
      <th>Instituicao</th>
      <th>Equipe</th>
-    
+
   </tr>
 </thead>
 <tbody>
   <tr>
      <td><%= cadastro.ocupacao %></td>
      <td><%= cadastro.instituicao %></td>
-    
+
      <td> <%= cadastro.equipe %></td>
   </tr>
 </tbody>
@@ -96,7 +91,7 @@
     <th>tetefone fixo</th>
     <th>celular</th>
     <td>email</td>
-     
+
   </tr>
 </thead>
 <tbody>
@@ -104,20 +99,20 @@
    <td><%= cadastro.telefone %></td>
     <td><%= cadastro.celular %></td>
     <td><%= cadastro.email %></td>
-    
+
   </tr>
 </tbody>
 
 <tbody>
     <tr>
-       
-       
-     
+
+
+
        <td><%= link_to 'Exibir', cadastro %></td>
         <td><%= link_to 'Atualizar', edit_cadastro_path(cadastro) %></td>
         <td><%= button_to 'Deletar', cadastro, method: :delete, class:"btn btn-danger",data: { confirm: 'certeza que deseja deletar este registro ?' } %></td>
           <th colspan="3"></th>
-   
+
     <% end %>
   </tbody>
 </table>

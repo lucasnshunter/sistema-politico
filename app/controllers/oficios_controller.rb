@@ -24,7 +24,7 @@ class OficiosController < ApplicationController
     @oficio = Oficio.new(oficio_params)
 
     if @oficio.save
-      redirect_to @oficio, notice: 'Oficio was successfully created.'
+      redirect_to @oficio, notice: 'Oficio criado com sucesso.'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class OficiosController < ApplicationController
   # PATCH/PUT /oficios/1
   def update
     if @oficio.update(oficio_params)
-      redirect_to @oficio, notice: 'Oficio was successfully updated.'
+      redirect_to @oficio, notice: 'Oficio atualizado com sucesso.'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class OficiosController < ApplicationController
   # DELETE /oficios/1
   def destroy
     @oficio.destroy
-    redirect_to oficios_url, notice: 'Oficio was successfully destroyed.'
+    redirect_to oficios_url, notice: 'Oficio apagado.'
   end
 
   private

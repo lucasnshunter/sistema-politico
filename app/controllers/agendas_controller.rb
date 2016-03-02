@@ -24,7 +24,7 @@ class AgendasController < ApplicationController
     @agenda = Agenda.new(agenda_params)
 
     if @agenda.save
-      redirect_to @agenda, notice: 'Agenda was successfully created.'
+      redirect_to @agenda, notice: 'Agenda criada com sucesso.'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class AgendasController < ApplicationController
   # PATCH/PUT /agendas/1
   def update
     if @agenda.update(agenda_params)
-      redirect_to @agenda, notice: 'Agenda was successfully updated.'
+      redirect_to @agenda, notice: 'Agenda atualizada com sucesso.'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class AgendasController < ApplicationController
   # DELETE /agendas/1
   def destroy
     @agenda.destroy
-    redirect_to agendas_url, notice: 'Agenda was successfully destroyed.'
+    redirect_to agendas_url, notice: 'Agenda apagada.'
   end
 
   private

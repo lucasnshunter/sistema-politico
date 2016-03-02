@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Lista de Oficios</h1>
 
 <table class="table table-bordered">
@@ -18,7 +16,7 @@
       <td><%= oficio.numero %></td>
     </tr>
   </tbody>
-  
+
   <thead>
     <tr>
       <td>Data de criação</td>
@@ -39,7 +37,7 @@
       <td>Destinatario</td>
       <td>Instituição do destinatario</td>
       <td>Rementente</td>
-     
+
     </tr>
   </thead>
   <tbody>
@@ -60,33 +58,33 @@
     <tr>
       <td><%= oficio.resumo %></td>
       <td><%= oficio.instituicao_remetente %></td>
-      <td><%= link_to 'Edit', edit_oficio_path(oficio) %></td>
+      <td><%= link_to 'Editar', edit_oficio_path(oficio) %></td>
     </tr>
   </tbody>
   </tbody>
   <thead>
     <tr>
       <td>mostrar</td>
-      
+
       <td>Destruir</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-       <td><%= link_to 'Show', oficio %></td>
-       
-      <td><%= link_to 'Destroy', oficio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       <td><%= link_to 'Mostrar', oficio %></td>
+
+      <td><%= link_to 'Apagar', oficio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   </tbody>
-        
-        
-        
-       
-      
+
+
+
+
+
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Oficio', new_oficio_path %>
+<%= link_to 'Novo Oficio', new_oficio_path %>

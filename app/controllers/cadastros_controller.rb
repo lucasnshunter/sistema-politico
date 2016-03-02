@@ -12,7 +12,7 @@ class CadastrosController < ApplicationController
   def resultado
     @cadastros=Cadastro.search(params[:query])
     #codigo
-  end  
+  end
 
   # GET /cadastros/1
   def show
@@ -32,7 +32,7 @@ class CadastrosController < ApplicationController
     @cadastro = Cadastro.new(cadastro_params)
 
     if @cadastro.save
-      redirect_to @cadastro, notice: 'Cadastro was successfully created.'
+      redirect_to @cadastro, notice: 'Cadastro criado com sucesso.'
     else
       render :new
     end
@@ -41,7 +41,7 @@ class CadastrosController < ApplicationController
   # PATCH/PUT /cadastros/1
   def update
     if @cadastro.update(cadastro_params)
-      redirect_to @cadastro, notice: 'Cadastro was successfully updated.'
+      redirect_to @cadastro, notice: 'Cadastro atualizado com sucesso.'
     else
       render :edit
     end
@@ -50,7 +50,7 @@ class CadastrosController < ApplicationController
   # DELETE /cadastros/1
   def destroy
     @cadastro.destroy
-    redirect_to cadastros_url, notice: 'Cadastro was successfully destroyed.'
+    redirect_to cadastros_url, notice: 'Cadastro apagado.'
   end
 
   private

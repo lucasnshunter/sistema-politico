@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-  
+
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -18,8 +18,8 @@
         <td> <%= f.label :idade %></td>
         <td><%= f.label :data_de_nascimento %></td>
         <td><%= f.label :filhos %></td>
-        
-        
+
+
       </tr>
     </thead>
     <tbody>
@@ -31,7 +31,7 @@
       </tr>
     </tbody>
   </table>
-  
+
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -39,7 +39,7 @@
         <td><%= f.label :tipo_rede %></td>
         <td><%= f.label :nome_do_programa %></td>
         <td><%= f.label :programa_assistencial %></td>
-        
+
       </tr>
     </thead>
     <tbody>
@@ -48,10 +48,10 @@
         <td> <%= f.text_field :tipo_rede %></td>
         <td> <%= f.text_field :nome_do_programa %></td>
         <td><%= f.check_box :programa_assistencial %></td>
-       
+
       </tr>
     </tbody>
-    
+
     <table class="table table-bordered">
     <thead>
       <tr>
@@ -66,10 +66,10 @@
         <td> <%= f.text_field :bairro %></td>
         <td> <%= f.text_field :cep %></td>
       </tr>
-      
-      
+
+
     </tbody>
-    
+
      <thead>
       <tr>
         <td>  <%= f.label :regiao %></td>
@@ -83,11 +83,11 @@
         <td><%= f.text_field :cidade %></td>
         <td><%= f.text_field :estado %></td>
       </tr>
-      
-      
+
+
     </tbody>
     </table>
-    
+
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -101,12 +101,12 @@
           <td><%= f.text_field :telefone %></td>
           <td><%= f.text_field :celular %></td>
           <td><%= f.text_field :email %></td>
-          
+
         </tr>
       </tbody>
     </table>
-    
-    
+
+
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -124,13 +124,13 @@
       </tbody>
     </table>
 
-  
-  
+
+
   <div class="field">
     <%= f.label :observacao %><br>
     <%= f.text_area :observacao %>
   </div>
   <div class="actions">
-    <%= f.submit "criar cadastro" %>
+    <%= f.submit "Salvar Cadastro" %>
   </div>
 <% end %>

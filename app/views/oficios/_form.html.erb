@@ -10,9 +10,9 @@
       </ul>
     </div>
   <% end %>
-  
+
   <table class="table table-bordered">
-    
+
       <thead>
         <tr>
           <td><%= f.label :titulo %></td>
@@ -27,11 +27,11 @@
           <td> <%= f.number_field :numero %></td>
         </tr>
       </tbody>
-  
+
   </table>
-  
+
   <table class="table table-bordered">
-    
+
       <thead>
         <tr>
          <td> <%= f.label :resumo %></td>
@@ -42,17 +42,17 @@
          <td> <%= f.text_area :resumo %></td>
         </tr>
       </tbody>
-  
+
   </table>
-  
+
   <table class="table table-bordered">
-    
+
       <thead>
         <tr>
           <td><%= f.label :data_criacao %></td>
           <td><%= f.label :data_envio %></td>
           <td><%= f.label :data_recebimento %></td>
-        
+
         </tr>
       </thead>
       <tbody>
@@ -62,18 +62,18 @@
          <td> <%= f.date_select :data_recebimento %></td>
         </tr>
       </tbody>
-  
+
   </table>
 
   <table class="table table-bordered">
-    
+
       <thead>
         <tr>
           <td> <%= f.label :destinatario %></td>
           <td> <%= f.label :instituicao_destinatario %></td>
           <td> <%= f.label :remetente %></td>
           <td><%= f.label :instituicao_remetente %></td>
-        
+
         </tr>
       </thead>
       <tbody>
@@ -82,15 +82,15 @@
           <td> <%= f.text_field :instituicao_destinatario %></td>
           <td> <%= f.text_field :remetente %></td>
           <td> <%= f.text_field :instituicao_remetente %></td>
-         
+
         </tr>
       </tbody>
-  
+
   </table>
- 
- 
-  
+
+
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Salvar Oficio" %>
   </div>
 <% end %>
