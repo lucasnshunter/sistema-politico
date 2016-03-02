@@ -1,26 +1,28 @@
 <tbody>
     <tr>
         <td>
-            <div class="btn-group" role="group" aria-label="...">
-               <%= link_to 'Agenda', agendas_path %>
-                <%= image_tag("agenda.png", :alt => "rss feed") %>
-            </div>
+          <div class="btn-group" role="group" aria-label="...">
+             <%= link_to agendas_path do%>
+               Agenda
+               <%= image_tag("agenda.png", :alt => "rss feed") %>
+             <% end %>
+          </div>
         </td>
         <td>
-            <div class="btn-group" role="group" aria-label="...">
-            <%= link_to "cadastros", cadastros_path %>
-             <%= image_tag("cadastro.png", :alt => "rss feed") %>
-            </div>
+          <div class="btn-group" role="group" aria-label="...">
+          <%= link_to cadastros_path do %>
+            Cadastros
+            <%= image_tag("cadastro.png", :alt => "rss feed") %>
+          <% end %>
+          </div>
         </td>
         <td>
-            <div class="btn-group" role="group" aria-label="...">
-            <%= link_to "Oficios", oficios_path %>
-            <%= image_tag("oficios.png", :alt => "rss feed") %>
-            
-        
-             
-            </div>
+          <div class="btn-group" role="group" aria-label="...">
+            <%= link_to oficios_path do %>
+              Oficios
+              <%= image_tag("oficios.png", :alt => "rss feed") %>
+            <% end %>
+          </div>
         </td>
     </tr>
 </tbody>
-
