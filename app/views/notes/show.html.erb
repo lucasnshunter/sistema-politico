@@ -1,14 +1,7 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Content:</strong>
+  <strong>Conteúdo:</strong>
   <%= @note.content %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @note.user %>
-</p>
-
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>
+<%= link_to 'Editar', edit_note_path(@note) %> |
+<%= link_to 'Voltar', notes_path %>
