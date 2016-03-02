@@ -24,6 +24,7 @@ class NotesController < ApplicationController
     @note = @notes.build(note_params)
 
     if @note.save
+      NoteNotifier.send_note_email(@note.content, current_user.email).deliver_now
       redirect_to @note, notice: 'Note was successfully created.'
     else
       render :new
@@ -52,7 +53,7 @@ class NotesController < ApplicationController
     end
 
     def set_notes
-      @notes = current_user.notes
+      @notes = Note.all
     end
 
     # Only allow a trusted parameter "white list" through.
